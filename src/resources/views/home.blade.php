@@ -32,54 +32,59 @@
                             <a class="nav-link" href="#">Features</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Pricing</a>
+                            <a class="nav-link" href="#">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Resources</a>
+                            <a class="nav-link" href="#">Resources</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Company</a>
+                            <a class="nav-link" href="#">Company</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <!-- <h1 class="logo">NanoLink</h1>-->
         </header>
 
         <div class="content">
-            <div>
-                <h2>Create Clickable Links</h2>
-                <p>Build and protect your brand using powerful, recognizable nano links.</p>
-                <a href="">Get Started for Free</a>
+            <div class="slider">
+                <div class="slider-info-box">
+                    <h2>Create Clickable Links</h2>
+                    <p>Build and protect your brand using powerful, recognizable nano links.</p>
+                    <a class="slider-button" href="">Get Started for Free</a>
+                </div>
             </div>
 
 
-            <div>
-                <form action="/urls" method="post">
-                    @csrf
-                    <input type="text" name="url_to_short" value="" placeholder="Nanize your link">
-                    <button type="submit">Nanize</button>
+            <div class="form-container d-flex justify-content-center align-content-center">
+                <div class="col-sm-12 col-lg-7">
+                    <form action="/urls" method="post">
+                        @csrf
+                        <div class="input-group mb-3">
+                            <input class="col-sm-12 col-md-8" type="text" name="url_to_short" value="" placeholder="Nanize your link">
 
-                    @error('url_to_short')
+                            <div class="input-group-append col-sm-12 col-md-4">
+                                <button class="nanize-button w-100" type="submit">Nanise</button>
+                            </div>
+                        </div>
+
+                        @error('url_to_short')
                         <strong>{{ $message }}</strong>
-                    @enderror
+                        @enderror
 
-                </form>
-                <span>By clicking Nanize, you are agreeing to NanoLink's Terms of Service and Privacy Policy</span>
+                    </form>
+                    <span class="col-sm-12 col-lg-6 small-text">By clicking Nanize, you are agreeing to NanoLink's Terms of Service and Privacy Policy</span>
+                </div>
             </div>
 
-            <div class="row d-flex justify-content-around p-lg-4">
-                <h3 class="most-recognizable">The most recognizable brands in the world love NanoLink</h3>
+            <div class="row d-flex justify-content-around p-lg-5">
+                <h3 class="most-recognizable font-weight-bold">The most recognizable brands in the world love NanoLink</h3>
             </div>
 
             <div class="row">
                 <div class="col-sm-3"></div>
                 <div class="brand-cards col-sm-6 d-flex justify-content-between">
-                    <div class="brand-card col-sm-1 col-lg-4">
-                        <div class="brand-inner">
-                            <img src="{{ asset('storage/disney_background.png') }}" class="w-100" alt="">
-                            <div class="overlay"></div>
-                        </div>
+                    <div style="background: url('{{ asset('storage/disney_background.png') }}')" class="brand-card col-sm-1 col-lg-4">
+                        <div class="overlay"></div>
                     </div>
                     <!--
                     <div>
@@ -110,11 +115,10 @@
 
         </div>
 
-        <div class="row footer">
-            <div class="col-sm-3"></div>
-            <footer class="d-flex justify-content-around col-sm-6">
-                <div>
-                    <h4><i class="fas fa-info-circle"></i> Why NanoLink</h4>
+        <div class="row footer d-flex justify-content-around">
+            <footer class="d-flex justify-content-around col-sm-12 col-lg-7 p-0">
+                <div class="col-sm-12 col-md-4">
+                    <h4 class="my-info-circle"><i class="fas fa-info-circle"></i> Why NanoLink</h4>
                     <ul>
                         <li>What is NanoLink</li>
                         <li>Integrations & API</li>
@@ -123,7 +127,7 @@
                     </ul>
                 </div>
 
-                <div>
+                <div class="col-sm-12 col-md-4">
                     <h4><i class="fas fa-info-circle"></i> Solutions</h4>
                     <ul>
                         <li>Social Media</li>
@@ -133,13 +137,13 @@
                     </ul>
                 </div>
 
-                <div>
+                <div class="col-sm-12 col-md-4">
                     <h4><i class="fas fa-envelope"></i> Contact</h4>
                     <ul>
                         <li>email</li>
                         <li>Careers</li>
                         <li>Social Life</li>
-                        <div>
+                        <div class="social-icons w-100 d-flex justify-content-start">
                             <i class="fab fa-twitter"></i>
                             <i class="fab fa-facebook-f"></i>
                             <i class="fab fa-instagram"></i>
@@ -147,7 +151,6 @@
                     </ul>
                 </div>
             </footer>
-            <div class="col-sm-3"></div>
         </div>
 
     </body>

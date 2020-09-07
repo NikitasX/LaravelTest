@@ -4,7 +4,7 @@
 @import '~@fortawesome/fontawesome-free/scss/regular.scss';
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';
 @import '~@fortawesome/fontawesome-free/scss/brands.scss';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 // Variables
 @import 'variables';
@@ -12,9 +12,13 @@
 // Bootstrap, use it or don't, it's up to you
 @import '~bootstrap/scss/bootstrap';
 
+@font-face {
+    font-family: TheWestGate;
+    src: url('/fonts/TheWestGate.ttf');
+}
 
 .logo {
-    font-family:$font-family-dafoe;
+    font-family:TheWestGate;
     color:$myBlue;
 }
 
@@ -24,7 +28,6 @@
 
 .navbar {
     li {
-        font-family: $font-family-osans;
         font-size:15pt;
         letter-spacing: .5pt;
         padding-right:1pt;
@@ -32,17 +35,100 @@
     }
 }
 
+.slider {
+    width:100%;
+    min-height:300pt;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+    .slider-info-box {
+        width:45%;
+
+        h2 {
+            font-family: "Open Sans", sans-serif;
+            font-size:40pt;
+            font-weight:800;
+            color:$myBlue;
+            margin:0;
+        }
+        p {
+            color:$myBlue;
+            font-size:11pt;
+        }
+        .slider-button {
+            background-color: #607D8B;
+            padding: 7.5pt 25pt;
+            color: white;
+            font-size: 10pt;
+            border-radius: 20pt;
+        }
+        .slider-button:hover {
+            text-decoration: none;
+        }
+    }
+}
+
 .most-recognizable {
     color:$myBlue;
+}
+
+.form-container {
+    background-color:#1A237E;
+    width:100%;
+    padding:25pt 0;
+
+    input {
+        border-radius:20pt;
+    }
+
+    .small-text {
+        display:block;
+        color:#BDBDBD;
+        opacity: .8;
+        font-size:8pt;
+        margin: -10pt auto auto;
+    }
+}
+
+.nanize-button {
+    background-color:#FFEB3B;
+    border-radius:20pt;
+    color:#212121;
+    font-size:12pt;
+    font-weight:bold;
+    line-height: 23pt;
+    letter-spacing: .5pt;
 }
 
 .footer {
     background-color: $myBlue;
     padding:50pt 0;
     color:#fff;
-}
 
-.brand-card, .brand-inner {
+    h4 {
+        font-size:16pt;
+        i {
+            position:absolute;
+            top:3pt;
+            left:-10pt;
+        }
+    }
+
+    ul {
+        padding:0;
+
+        .social-icons {
+            i {
+                font-size:20pt;
+                padding:5pt 20pt 0 0;
+            }
+        }
+        li {
+            list-style: none;
+        }
+    }
 }
 
 .overlay {
