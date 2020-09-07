@@ -56,7 +56,7 @@
 
 
             <div class="form-container d-flex justify-content-center align-content-center">
-                <div class="col-sm-12 col-lg-7">
+                <div class="col-sm-12 col-lg-7 p-lg-4-4">
                     <form action="/urls" method="post">
                         @csrf
                         <div class="input-group mb-3">
@@ -76,47 +76,116 @@
                 </div>
             </div>
 
-            <div class="row d-flex justify-content-around p-lg-5">
-                <h3 class="most-recognizable font-weight-bold">The most recognizable brands in the world love NanoLink</h3>
+            <div class="d-flex justify-content-around mt-lg-4 p-lg-5">
+                <h3 class="most-recognizable font-weight-bold ">The most recognizable brands in the world love NanoLink</h3>
             </div>
 
-            <div class="row">
-                <div class="col-sm-3"></div>
-                <div class="brand-cards col-sm-6 d-flex justify-content-between">
-                    <div style="background: url('{{ asset('storage/disney_background.png') }}')" class="brand-card col-sm-1 col-lg-4">
-                        <div class="overlay"></div>
-                    </div>
-                    <!--
-                    <div>
-                        <h4>Disney</h4>
-                        <button>Follow</button>
-                    </div>
-                    <img src="{{ asset('storage/disney_logo.jpg') }}" alt="">-->
+            <div class="d-flex justify-content-center align-content-center">
+                <div class="brand-cards d-flex justify-content-between flex-wrap">
 
-                <!--
-                    <div class="brand-card col-sm-12 col-lg-4">
-                        <img src="{{ asset('storage/nike_background.png') }}" alt="">
-                        <img src="{{ asset('storage/nike_logo.jpg') }}" alt="">
-                        <h4>Nike</h4>
-                        <button>Follow</button>
+                    <!-- Brand Card -->
+                    <div style="background-image: url('{{ asset('storage/disney_background.png') }}');" class="brand-card col-lg-3 justify-content-end">
+                        <div class="overlay">
+                            <img class="rounded-circle" src="{{ asset('storage/disney_logo.jpg') }}" alt="">
+
+                            <div class="overlay-info">
+                                <h4>Disney</h4>
+                                <button>Follow</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="brand-card col-sm-12 col-lg-4">
-                        <img src="{{ asset('storage/amazon_background.png') }}" alt="">
-                        <img src="{{ asset('storage/amazon_logo.jpg') }}" alt="">
-                        <h4>Amazon</h4>
-                        <button>Follow</button>
-                    </div>-->
+
+                    <!-- Brand Card -->
+                    <div style="background-image: url('{{ asset('storage/amazon_background.png') }}');" class="brand-card col-lg-3 justify-content-end">
+                        <div class="overlay">
+                            <img class="rounded-circle" src="{{ asset('storage/amazon_logo.jpg') }}" alt="">
+
+                            <div class="overlay-info">
+                                <h4>Amazon</h4>
+                                <button>Follow</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brand Card -->
+                    <div style="background-image: url('{{ asset('storage/nike_background.png') }}');" class="brand-card col-lg-3 justify-content-end">
+                        <div class="overlay">
+                            <img class="rounded-circle" src="{{ asset('storage/nike_logo.jpg') }}" alt="">
+
+                            <div class="overlay-info">
+                                <h4>Nike</h4>
+                                <button>Follow</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brand Card -->
+                    <div style="background-image: url('{{ asset('storage/disney_background.png') }}');" class="brand-card col-lg-3 justify-content-end">
+                        <div class="overlay">
+                            <img class="rounded-circle" src="{{ asset('storage/disney_logo.jpg') }}" alt="">
+
+                            <div class="overlay-info">
+                                <h4>Disney</h4>
+                                <button>Follow</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brand Card -->
+                    <div style="background-image: url('{{ asset('storage/amazon_background.png') }}');" class="brand-card col-lg-3 justify-content-end">
+                        <div class="overlay">
+                            <img class="rounded-circle" src="{{ asset('storage/amazon_logo.jpg') }}" alt="">
+
+                            <div class="overlay-info">
+                                <h4>Amazon</h4>
+                                <button>Follow</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brand Card -->
+                    <div style="background-image: url('{{ asset('storage/nike_background.png') }}');" class="brand-card col-lg-3 justify-content-end">
+                        <div class="overlay">
+                            <img class="rounded-circle" src="{{ asset('storage/nike_logo.jpg') }}" alt="">
+
+                            <div class="overlay-info">
+                                <h4>Nike</h4>
+                                <button>Follow</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brand Card -->
+                    <div style="background-image: url('{{ asset('storage/disney_background.png') }}');" class="brand-card col-lg-3 justify-content-end">
+                        <div class="overlay">
+                            <img class="rounded-circle" src="{{ asset('storage/disney_logo.jpg') }}" alt="">
+
+                            <div class="overlay-info">
+                                <h4>Disney</h4>
+                                <button>Follow</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brand Card -->
+                    <div style="background-image: url('{{ asset('storage/amazon_background.png') }}');" class="brand-card col-lg-3 justify-content-end">
+                        <div class="overlay">
+                            <img class="rounded-circle" src="{{ asset('storage/amazon_logo.jpg') }}" alt="">
+
+                            <div class="overlay-info">
+                                <h4>Amazon</h4>
+                                <button>Follow</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="load-more-button col-sm-12 col-lg-4" href="#">Load More</button>
                 </div>
-                <div class="col-sm-3"></div>
-                <a href="">Load More</a>
-
             </div>
 
 
-        </div>
-
-        <div class="row footer d-flex justify-content-around">
-            <footer class="d-flex justify-content-around col-sm-12 col-lg-7 p-0">
+        <div class="footer d-flex justify-content-around">
+            <footer class="d-flex justify-content-between col-sm-12 col-lg-6 ml-lg-5">
                 <div class="col-sm-12 col-md-4">
                     <h4 class="my-info-circle"><i class="fas fa-info-circle"></i> Why NanoLink</h4>
                     <ul>

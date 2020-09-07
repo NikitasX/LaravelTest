@@ -44,7 +44,7 @@
     flex-wrap: wrap;
 
     .slider-info-box {
-        width:45%;
+        width:40%;
 
         h2 {
             font-family: "Open Sans", sans-serif;
@@ -58,7 +58,7 @@
             font-size:11pt;
         }
         .slider-button {
-            background-color: #607D8B;
+            background-color: $myBlue;
             padding: 7.5pt 25pt;
             color: white;
             font-size: 10pt;
@@ -68,10 +68,6 @@
             text-decoration: none;
         }
     }
-}
-
-.most-recognizable {
-    color:$myBlue;
 }
 
 .form-container {
@@ -102,6 +98,81 @@
     letter-spacing: .5pt;
 }
 
+.most-recognizable {
+    color:$myBlue;
+}
+
+.brand-cards {
+    width:50%;
+    margin-bottom: 50pt;
+
+    .brand-card {
+        height: 280px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        padding: 0;
+        border-radius: 20pt;
+        margin-bottom: 20pt;
+
+        .overlay {
+            display: block;
+            z-index: 999;
+            position: absolute;
+            left: 4%;
+            bottom: -10pt;
+            width: 92%;
+            border-bottom-right-radius: 20pt;
+            border-bottom-left-radius: 20pt;
+            height: 40%;
+            background-color: white;
+            box-shadow: $myShadow 0 3pt 6pt;
+
+            img {
+                position:absolute;
+                top:-30pt; left:calc(50% - 30pt);
+                display:block;
+                max-width:60pt;
+                border:1pt #BDBDBD solid;
+            }
+
+            .overlay-info {
+                width:100%;
+                position:absolute;
+                bottom:10pt; left:0;
+
+                h4 {
+                    text-align:center;
+                    font-family: "Open Sans", sans-serif;
+                    font-weight:bold;
+                    font-size:10pt;
+                    letter-spacing: 0pt;
+                }
+
+                button {
+                    width: 90%;
+                    margin-left: 5%;
+                    background-color: $myBlue;
+                    color: white;
+                    font-size: 10pt;
+                    border-radius: 20pt;
+                }
+            }
+        }
+    }
+
+    .load-more-button {
+        background-color: #fff;
+        border-radius: 20pt;
+        border:1pt #f1f1f1 solid;
+        box-shadow: $myShadow 0 3pt 6pt;
+        padding:5pt 0;
+        margin:20pt auto auto;
+        text-align: center;
+    }
+}
+
+
 .footer {
     background-color: $myBlue;
     padding:50pt 0;
@@ -129,13 +200,4 @@
             list-style: none;
         }
     }
-}
-
-.overlay {
-    display:block;
-    z-index:999;
-    position: absolute;
-    left:0;bottom:0;
-    width:100%;height:40%;
-    background-color:white;
 }
